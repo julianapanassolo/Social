@@ -1,3 +1,0 @@
-package modelos
-
-type Usuario
