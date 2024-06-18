@@ -9,31 +9,39 @@ var rotasUsuarios = []Rota{
 	{
 		URI: "/usuarios",
 		Metodo: http.MethodPost,
-		Funcao: controllers.CriarUsuario,
+		Funcao: func(controllers.CriarUsuario(),
 		RequerAutenticacao: false,
 	},
 	{
 		URI: "/usuarios",
 		Metodo: http.MethodGet,
-		Funcao: controllers.BuscarUsuarios,
+		Funcao: func(w http.ResponseWriter, r *http.Request) {
+
+		},
 		RequerAutenticacao: false,
 	},
 	{
 		URI: "/usuarios/{usuarioId}",
 		Metodo: http.MethodGet,
-		Funcao: controllers.BuscarUsuario,
+		Funcao: func(w http.ResponseWriter, r *http.Request) {
+
+		},
 		RequerAutenticacao: false,
 	},
 	{
 		URI: "/usuarios/{usuarioId}",
 		Metodo: http.MethodPut,
-		Funcao: controllers.AtualizarUsuario,
+		Funcao: func(w http.ResponseWriter, r *http.Request) {
+
+		},
 		RequerAutenticacao: false,
 	},
 	{
 		URI: "/usuarios/{usuarioId}",
 		Metodo: http.MethodDelete,
-		Funcao: controllers.DeletarUsuario,
+		Funcao: func(w http.ResponseWriter, r *http.Request) {
+
+		},
 		RequerAutenticacao: false,
 	},
 }

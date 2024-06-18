@@ -27,13 +27,15 @@ var rotasUsuarios = []Rota{
 	{
 		URI: "/usuarios/{usuarioId}",
 		Metodo: http.MethodPut,
-		Funcao: controllers.AtualizarUsuario,
+		Funcao: con,
 		RequerAutenticacao: false,
 	},
 	{
 		URI: "/usuarios/{usuarioId}",
 		Metodo: http.MethodDelete,
-		Funcao: controllers.DeletarUsuario,
+		Funcao: func(w http.ResponseWriter, r *http.Request) {
+
+		},
 		RequerAutenticacao: false,
 	},
 }

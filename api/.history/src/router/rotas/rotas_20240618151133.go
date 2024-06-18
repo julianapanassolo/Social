@@ -14,7 +14,6 @@ type Rota struct {
 	RequerAutenticacao bool
 }
 
-// Configurar = Coloca todas as rotas dentro do router
 func Configurar(r *mux.Router) *mux.Router {
 	rotas := rotasUsuarios
 
@@ -22,5 +21,5 @@ func Configurar(r *mux.Router) *mux.Router {
 		r.HandleFunc(rota.URI, rota.Funcao).Methods(rota.Metodo)
 	}
 
-	return r
+	
 }
