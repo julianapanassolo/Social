@@ -2,7 +2,7 @@ package rotas
 
 import "net/http"
 
-// "Rota" = Todas as rotas da API
+// "Rota"
 type Rota struct {
 	URI string
 	Metodo string
