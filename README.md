@@ -1,1 +1,1 @@
-Portifólio - Rede Socail
+Portifólio - Rede Social
