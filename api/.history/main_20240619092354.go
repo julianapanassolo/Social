@@ -10,11 +10,11 @@ import (
 
 func main() {
 	config.Carregar()
-
-	fmt.Println(config.StringConexaoBanco)
-
+	fmt.Println(con)
 	fmt.Println("Rodando API!")	
 	r := router.Gerar()
 
-	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%d", config.Porta), r))
+	log.Fatal(http.ListenAndServe(":5000", r))
+
+
 }

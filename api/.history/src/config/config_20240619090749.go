@@ -1,0 +1,26 @@
+package config
+
+import (
+	"log"
+
+	"github.com/joho/godotenv"
+)
+
+var (
+	// StringConexaoBanco = É a string de conexeção com o mysql
+	StringConexaoBanco = ""
+	// Porta: Onde a API vai estar rodando
+	Porta = 0 
+)
+
+
+// Carregar: Vai inicializar as variáveis de ambiente
+func Carregar() {
+	var erro error
+
+	if  erro = godotenv.Load(); erro != nil {
+		log.Fatal(erro) // Se houver problema em carregar as variávies de am
+	}
+
+
+}
