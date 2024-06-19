@@ -25,15 +25,8 @@ func (repositorio Usuarios) Criar(usuario modelos.Usuario) (uint64, error) {
 	}
 	defer statement.Close()
 
-	resultado, erro := statement.Exec(usuario.Nome, usuario.Nick, usuario.Email, usuario.Senha)
+	resultado, erro := statement.Exec(usuario.Nome, usuario.Nick, usuario.email, usuario.senha)
 	if erro != nil {
 		return 0, erro  // Valor 0 se refere ao "uint64"
 	}
-
-	ultimoIDInserido, erro := resultado.LastInsertId()
-	if erro != nil {
-		return 0, erro  // Valor 0 se refere ao "uint64"
-	}
-
-	return uint64(ultimoIDInserido), nil
 }

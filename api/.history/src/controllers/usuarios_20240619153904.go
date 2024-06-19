@@ -28,7 +28,7 @@ func CriarUsuario(w http.ResponseWriter, r *http.Request) {
 	}
 
 	repositorio := repositorios.NovoRepositorioDeUsuarios(db)
-	repositorio.Criar(usuario)
+	repo
 
 }
 // BuscarUsuarios = Buscando todos os usuários salvos no banco de dados

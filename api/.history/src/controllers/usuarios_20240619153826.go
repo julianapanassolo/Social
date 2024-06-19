@@ -2,7 +2,6 @@ package controllers
 
 import (
 	"api/src/modelos"
-	"api/src/repositorios"
 	"encoding/json"
 	"io/ioutil"
 	"log"
@@ -27,8 +26,7 @@ func CriarUsuario(w http.ResponseWriter, r *http.Request) {
 		log.Fatal(erro)
 	}
 
-	repositorio := repositorios.NovoRepositorioDeUsuarios(db)
-	repositorio.Criar(usuario)
+	repositoprio
 
 }
 // BuscarUsuarios = Buscando todos os usuários salvos no banco de dados
