@@ -1,8 +1,6 @@
 package controllers
 
 import (
-	"api/src/modelos"
-	"encoding/json"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -16,16 +14,7 @@ func CriarUsuario(w http.ResponseWriter, r *http.Request) {
 		log.Fatal(erro)
 	}
 
-	var usuario modelos.Usuario
-	if erro := json.Unmarshal(corpoRequest, &usuario); erro != nil {
-		log.Fatal(erro)
-	}
-
-	db, erro := banco.Conectar()
-	if erro != nil {
-		log.Fatal(erro)
-	}
-
+	var usu
 }
 // BuscarUsuarios = Buscando todos os usuários salvos no banco de dados
 func BuscarUsuarios(w http.ResponseWriter, r *http.Request) {

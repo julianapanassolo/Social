@@ -22,9 +22,7 @@ func CriarUsuario(w http.ResponseWriter, r *http.Request) {
 	}
 
 	db, erro := banco.Conectar()
-	if erro != nil {
-		log.Fatal(erro)
-	}
+	if erro 
 
 }
 // BuscarUsuarios = Buscando todos os usuários salvos no banco de dados
