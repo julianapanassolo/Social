@@ -9,9 +9,9 @@ import (
 )
 
 func main() {
-	config.Carregar()
+	config.Carregar()		
 	r := router.Gerar()
 
-	fmt.Printf("Escutando na porta %d", config.Porta)
+	fmt.Printf("Escutando na porta %")
 	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%d", config.Porta), r))
 }
