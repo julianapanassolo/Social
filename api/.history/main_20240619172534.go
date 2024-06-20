@@ -1,0 +1,20 @@
+package main
+
+import (
+    "fmt"
+    "log"
+    "net/http"
+    "os"
+)
+
+func main() {
+    // Definindo o timezone diretamente no código
+    os.Setenv("TZ", "America/Sao_Paulo")
+
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+        fmt.Fprintf(w, "Escutando a porta 5000!")
+    })
+
+    fmt.Println("Id Inserido")
+    log.Fatal(http.ListenAndServe(":5000", nil))
+}
