@@ -1,0 +1,12 @@
+package controllers
+
+import (
+	"io/ioutil"
+	"net/http"
+)
+
+// Login = Resposável por autenticar um usuário na API
+func Login(w http.ResponseWriter r *http.Request) {
+	corpoRequisicao, erro := ioutil.ReadAll()
+
+}
