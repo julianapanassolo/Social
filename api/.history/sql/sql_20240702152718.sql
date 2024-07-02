@@ -15,7 +15,6 @@ CREATE TABLE usuarios(
     criadoEm timestamp default current_timestamp()
  ) ENGINE=INNODB;
 
-
  CREATE TABLE seguidores(
     usuario_id int not null,
     FOREIGN KEY (usuario_id)
@@ -29,7 +28,6 @@ CREATE TABLE usuarios(
 
     primary key(usuario_id, seguidor_id)
  ) ENGINE=INNODB;
- 
 
  CREATE TABLE publicacoes(
    id int auto_increment primary key,
@@ -41,6 +39,6 @@ CREATE TABLE usuarios(
    REFERENCES usuarios(id)
    ON DELETE CASCADE,
 
-   curtidas int default 0,
+   curtidas int default 0
    criadaEm timestamp default current_timestamp
  ) ENGINE=INNODB;
