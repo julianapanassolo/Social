@@ -204,9 +204,6 @@ func (repositorio Publicacoes) Descurtir(publicacaoID uint64) error {
 	if erro != nil {
 		return erro
 	}
-	defer statement.Close()
-
-	
 	if _, erro = statement.Exec(publicacaoID); erro != nil {
 		return erro
 	}

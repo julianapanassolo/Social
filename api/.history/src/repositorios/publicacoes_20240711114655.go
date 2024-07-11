@@ -198,15 +198,13 @@ func (repositorio Publicacoes) Curtir(publicacaoID uint64) error {
 func (repositorio Publicacoes) Descurtir(publicacaoID uint64) error {
 	statement, erro := repositorio.db.Prepare(`
 		UPDATE publicacoes
-		SET curtidas = curtidas - 1
-		WHERE id = ?	
+		SET curtidas = curtidas - 1   	
+    	
+	WHERE id = ?	
 	`)
 	if erro != nil {
 		return erro
 	}
-	defer statement.Close()
-
-	
 	if _, erro = statement.Exec(publicacaoID); erro != nil {
 		return erro
 	}
