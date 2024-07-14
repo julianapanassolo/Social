@@ -1,0 +1,14 @@
+package respostas
+
+import (
+	"encoding/json"
+	"net/http"
+)
+
+// JSON = Retorna um resposta em formato JSON para a requisição
+func JSON(w http.ResponseWriter, statusCode int, dados interface{}) {
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(statusCode)
+
+	if erro := json.NewEncoder(w)
+}
