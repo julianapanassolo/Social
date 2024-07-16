@@ -1,0 +1,4 @@
+package cookies
+
+
+var s *
