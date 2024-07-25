@@ -1,0 +1,3 @@
+package modelos
+
+type Publicacao
