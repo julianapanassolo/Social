@@ -1,3 +1,0 @@
-package autenticacao
-
-func Criar
