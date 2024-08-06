@@ -1,0 +1,20 @@
+<div class="jumbotron">    
+ 
+
+    {{ if (eq .AutorID $.UsuarioID) }}
+    <p>Botões curtir, editar e excluir</p>
+    {{ else }}
+    <p>Botão curtir</p>
+    {{ end }} 
+</div>
+
+{{ define "cabecalho-publicaco" }}
+
+{{ end }}
+
+{{ define "publicacao-com-permissao" }}
+{{ end }}
+
+
+{{ define "publicacao-sem-permissao" }}
+{{ end }}

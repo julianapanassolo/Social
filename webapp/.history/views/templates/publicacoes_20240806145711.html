@@ -1,0 +1,19 @@
+{{ define "cabecalho-publicaco" }}
+    <h1 class="display-4">{{ .Titulo }}</h1>
+    <p class="lead">{{ .Conteudo }}</p>
+    <a href="#">{{ .AutorNick }} - {{ .CriadaEm.Format "02/01/2006 15:04:05" }}</a>
+    <hr class="my-4">
+{{ end }}
+
+{{ define "publicacao-com-permissao" }}
+    <div class="jumbotron" data-publicaco-id="{{ .ID }}">
+        {{ template "cabecalho-publicaco" .}}
+    </div>
+{{ end }}
+
+
+{{ define "publicacao-sem-permissao" }}
+    <div class="jumbotron" data-publicaco-id="{{ .ID }}">
+        {{ template "cabecalho-publicaco" .}}
+    </div>
+{{ end }}

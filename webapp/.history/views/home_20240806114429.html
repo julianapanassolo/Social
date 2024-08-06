@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social</title>
+    <link href="/assets/css/bootstrap.css" rel="stylesheet" />    
+
+  </head>
+
+  <body> 
+   
+   {{ template "cabecalho" }}
+
+    <div class="container-fluid">
+      <div class="row mt-4">
+          <div class="col-12 col-md-5">
+              <h3>Nova publicação</h3>
+              <fieldset>
+                  <form id="nova-publicacao">
+                      <div class="form-group">
+                          <label for="titulo">Título</label>
+                          <input type="text" class="form-control" id="titulo" name="titulo" required="required" placeholder="Insira o título da sua publicação">
+                      </div>
+                      <div class="form-group">
+                          <label for="conteudo">Conteúdo</label>
+                          <textarea class="form-control" id="conteudo" name="conteudo" required="required" placeholder="Insira o conteúdo da sua publicação"></textarea>
+                      </div>
+                      <button class="btn btn-primary" type="submit">Publicar</button>
+                  </form>
+              </fieldset>
+          </div>
+
+          <div class="col-12 col-md-7">
+              {{ range .Publicacoes }}
+
+                {{ if (eq .AutorID $.UsuarioID) }}
+                    {{ template "publicacao-com-permissao" . }}
+                    
+                {{ else }}
+                    {{ template}}    
+
+
+                  <!-- <div class="jumbotron">
+                      <h1 class="display-4">{{ .Titulo }}</h1>
+                      <p class="lead">{{ .Conteudo }}</p>
+                      <a href="#">{{ .AutorNick }} - {{ .CriadaEm.Format "02/01/2006 15:04:05" }}</a>
+                      <hr class="my-4">
+
+                      {{ if (eq .AutorID $.UsuarioID) }}
+                      <p>Botões curtir, editar e excluir</p>
+                      {{ else }}
+                      <p>Botão curtir</p>
+                      {{ end }}
+
+                  </div> -->
+              {{ end }}
+          </div>
+      </div>
+  </div>
+
+    {{ template "rodape" }}
+    {{ template "scripts" }}
+
+    <script src="/assets/js/publicacoes.js"></script>
+
+</body>
+</html>

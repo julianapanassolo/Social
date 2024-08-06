@@ -1,0 +1,126 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border=-box;
+    font-family:Arial, Helvetica, sans-serif
+    
+}
+
+a {
+    font-size: 16px;
+    color: #3b5998;
+    line-height: 1.9;   
+    
+}
+
+a:houver {
+    text-decoration: none;
+}
+
+input {
+    outline: none;
+    border: none;
+    color: #3b5998;
+    line-height: 1.2;
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    background: transparent;
+    height: 62px;
+    padding: 0 20px 0 38px;
+}
+
+input::placeholder {
+    color: #8f8fa1;
+}
+
+.container-login {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.container-login > div {
+    width: 390px;
+    background: #d6beec;
+    border-radius: 10px;
+    position: relative;
+    padding: 50px 0 90px 0;
+}
+
+.Social-form > span {
+    font-size: 30px;
+    color: #3b5998;
+    line-height: 1.2;
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding-bottom: 20px;
+    
+    
+}
+
+.Social-form > div {
+    width: 100%;
+    position: center;
+    background-color: #e6e6e6;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    
+}
+
+.btn-social {
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    padding: 0 20px;
+    width: 100%;
+    height: 30px;
+    background-color: #295355;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    
+}
+
+body {
+    background-color: #d6beec;
+}
+
+/* Adicione as fontes usando @font-face */
+@font-face {
+    font-family: 'Material Symbols Outlined';
+    src: url('/assets/fonts/MaterialIconsOutlined-Regular.otf') format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'Material Symbols Rounded';
+    src: url('/assets/fonts/MaterialIconsRound-Regular.otf') format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'Material Symbols Sharp';
+    src: url('/assets/fonts/MaterialIconsSharp-Regular.otf') format('opentype');
+  }
+  
+  /* Use as fontes no seu CSS */
+  body {
+    font-family: 'Material Symbols Outlined', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Material Symbols Rounded', sans-serif;
+  }
+  
+  p {
+    font-family: 'Material Symbols Sharp', sans-serif;
+  }
+  
+
+
