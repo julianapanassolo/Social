@@ -1,0 +1,53 @@
+{{ define "curtidas"}}
+<i class="fas "></i>
+
+<span> {{ .Curtidas}}</span>
+<link
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+  rel="stylesheet"
+/>
+<button class="curtir-publicacao" data-publicacao-id="{{ .ID }}">Curtir</button>
+{{ end }} 
+
+
+{{ define "editar"}}
+<a href="/publicacoes/{{ .ID }}/atualizar">
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+/></a>
+{{ end }} 
+
+
+{{ define "deletar"}}
+  <i class="fas fa-trash text-danger deletar-publicacao" style="cursor: pointer;"></i>
+{{ end }} 
+
+
+{{ define "cabecalho-publicacao" }}
+<h1 class="display-4">{{ .Titulo }}</h1>
+<p class="lead">{{ .Conteudo }}</p>
+<a href="/usuarios/{{ .AutorID }}">
+  {{ .AutorNick }} - {{ .CriadaEm.Format "02/01/2006" }}
+</a>
+<hr class="my-4" />
+{{ end }} 
+
+
+{{ define "publicacao-com-permissao" }}
+<div class="jumbotron" data-publicacao-id="{{ .ID }}">
+  {{ template "cabecalho-publicacao" . }}
+  <p>
+    {{ template "curtidas" . }} {{ template "editar" . }} {{ template "deletar"
+    . }}
+  </p>
+</div>
+{{ end }} 
+
+
+{{ define "publicacao-sem-permissao" }}
+<div class="jumbotron" data-publicacao-id="{{ .ID }}">
+  {{ template "cabecalho-publicacao" . }}
+  <p>{{ template "curtidas" . }}</p>
+</div>
+{{ end }}
