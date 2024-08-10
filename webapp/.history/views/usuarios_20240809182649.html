@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social - Usuários</title>
+    <link href="/assets/css/bootstrap.css" rel="stylesheet" /> 
+    <link href="/assets/css/login.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+
+<body>
+
+    {{ template "cabecalho" }}
+
+    <div class="container-fluid">
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Usuários Encontrados</h5>
+                        <p class="card-text">
+                            {{ .Nome }} - {{ .Nick }} - Membro Desde: {{ .CriadoEm.Format ""}}
+                        </p>
+                        {{ range . }}
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{ template "rodape" }}
+    {{ template "scripts" }}
+
+</body>
+
+  </html>
