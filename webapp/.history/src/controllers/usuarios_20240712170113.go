@@ -1,9 +1,0 @@
-package controllers
-
-import "net/http"
-
-
-// CriarUsuario = 
-func CriarUsuario(w http.ResponseWriter, r*http.Request) {
-	r.ParseForm()
-}

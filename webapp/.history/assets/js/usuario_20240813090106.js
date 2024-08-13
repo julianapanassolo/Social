@@ -1,0 +1,5 @@
+function pararDeSeguir() {
+
+}
+
+function seguir

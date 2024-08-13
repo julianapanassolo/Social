@@ -1,0 +1,9 @@
+$('')
+
+function pararDeSeguir() {
+
+}
+
+function seguir() {
+
+}

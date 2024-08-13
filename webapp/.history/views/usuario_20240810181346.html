@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social - {{ .Usuario.Nome }}</title>
+    <link href="/assets/css/bootstrap.css" rel="stylesheet" /> 
+    <link href="/assets/css/login.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+
+  <body>
+    {{ template "cabecalho" }}
+    {{ range.Usuario.Seguidores }}
+        {{ if }}
+
+    {{ end }}
+
+    {{ $SeguidoPeloUsuarioLogado := false }}
+
+        <div class="container-fluid">
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-boby">
+                            <h5 class="card-title">
+                                Perfil do Usuário
+                            </h5>
+                            <h6 class="card-subtitle mb-2 text-muted">
+                                {{ .Usuario.Nome }} - {{ .Usuario.Nick }} - Membro Desde: {{ .Usuario.CriadoEm.Format "02/01/2006"}}
+                            </h6>
+
+                            <p class="card-text">
+                                <a href="#">
+                                    Seguidores: {{ len .Usuario.Seguidores }}
+                                </a>
+                            </p>
+
+                            <p class="card-text">
+                                <a href="#">
+                                    Seguindo: {{ len .Usuario.Seguindo }}
+                                </a>
+                            </p>
+
+                            
+
+                            <a href="#" class="card-link">
+
+                                <button id="seguir" class="btn-btn-info" data-usuario-id="{{ .Usuario.ID }}">
+                                    Seguir
+                                </button>
+                            </a>
+
+                            <a href="#" class="card-link">
+                                <button id="parar-de-seguir" class="btn-btn-info" data-usuario-id="{{ .Usuario.ID }}">
+                                    Para de Seguir
+                                </button>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+  </body>
+  </html>

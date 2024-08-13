@@ -1,3 +1,0 @@
-package rotas
-
-var rotasUsuarios
