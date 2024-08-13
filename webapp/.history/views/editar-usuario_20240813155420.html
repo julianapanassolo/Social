@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social - Editar Usuário</title>
+    <link href="/assets/css/bootstrap.css" rel="stylesheet" /> 
+    <link href="/assets/css/login.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+
+<body>
+
+    {{ template "cabecalho" }}
+
+
+    <div class="container-fluid">
+        <div class="row mt-4">
+            <div class="col-12">
+                <h3>Editar Dados</h3>
+                <form id="editar-usuario">
+                    <div class="form group">
+                        <label for="nome">Nome</label>
+                        <input type="text" class="form-control" id="nome" name="nome"
+                        placeholder="Insira seu nome" value="{{ .Nome }}" required="required">
+                    </div>
+
+                    <div class="form group">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" id="email" name="email"
+                        placeholder="Insira seu e-mail" value="{{ .Email }}" required="required">
+                    </div>
+
+                    <div class="form group">
+                        <label for="nick">Nick</label>
+                        <input type="text" class="form-control" id="nick" name="nick"
+                        placeholder="Insira seu e-mail" value="{{ .Nick }}" required="required">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    {{ template "rodape" }}
+    {{ template "scripts" }}
+
+
+
+
+
+</body>
+  </html>
