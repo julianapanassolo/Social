@@ -1,1 +1,1 @@
-Portifólio - Rede Social - HTLM/CSS/JS/JSON/Go
+Portifólio - Rede Social - HTML/CSS/JS/GO
