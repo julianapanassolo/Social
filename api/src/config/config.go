@@ -5,11 +5,12 @@ import (
 	"log"
 	"os"
 	"strconv"
+
 	"github.com/joho/godotenv"
 )
 
 var (
-	// StringConexaoBanco é a string de conexão com o MySQL
+	// StringConexaoBanco = é a string de conexão com o MySQL
 	StringConexaoBanco = ""
 	// Porta é onde a API vai estar rodando
 	Porta = 0
@@ -41,6 +42,5 @@ func Carregar() {
 		os.Getenv("DB_USUARIO"),
 		os.Getenv("DB_SENHA"),
 		os.Getenv("DB_NOME"),
-		
 	)
 }

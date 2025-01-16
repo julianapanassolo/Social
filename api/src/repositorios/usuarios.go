@@ -29,12 +29,12 @@ func (repositorio *usuarios) Criar(usuario modelos.Usuario) (uint64, error) {
 
 	resultado, erro := statement.Exec(usuario.Nome, usuario.Nick, usuario.Email, usuario.Senha)
 	if erro != nil {
-		return 0, erro  // Valor 0 se refere ao "uint64"
+		return 0, erro  
 	}
 
 	ultimoIDInserido, erro := resultado.LastInsertId()
 	if erro != nil {
-		return 0, erro  // Valor 0 se refere ao "uint64"
+		return 0, erro  
 	}
 
 	return uint64(ultimoIDInserido), nil

@@ -1,0 +1,11 @@
+version: "3"
+services:
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: social
+      MYSQL_DATABASE: social
+      MYSQL_USER: juliana
+      MYSQL_PASSWORD: social
+    ports:
+      - "3307:3306"

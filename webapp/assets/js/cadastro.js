@@ -35,6 +35,6 @@ function criarUsuario(evento) {
                 })
             })
     }).fail(function() {
-        Swal.fire("Ops...!", "Erro ao cadastrar o usuário!", "error");       
+        Swal.fire("Ops...!", "Erro ao cadastrar o usuário!", "error");
     });
 }
