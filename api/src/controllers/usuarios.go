@@ -6,12 +6,13 @@ import (
 	"api/src/modelos"
 	"api/src/repositorios"
 	"api/src/respostas"
-	"api/src/seguranca"
 	"encoding/json"
 	"errors"
 	"io/ioutil"
 	"net/http"
 	"strconv"
+
+	"api/src/seguranca"
 
 	"github.com/gorilla/mux"
 )
