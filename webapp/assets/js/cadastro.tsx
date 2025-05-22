@@ -9,7 +9,7 @@ const Cadastro = () => {
   const [senha, setSenha] = useState("");
   const [confimarSenha, setConfimarSenha] = useState("");
 
-  const handleSubmit = (evento) => {
+  const handleSubmit = (evento: { preventDefault: () => void; }) => {
     evento.preventDefault();
     if (senha !== confimarSenha) {
       Swal.fire("Ops...", "As senhas devem ser iguais", "error");
@@ -41,7 +41,7 @@ const Cadastro = () => {
             },
           })
             .done(function () {
-              window.location = "/home";
+              window.location.replace("/home");
             })
             .fail(function () {
               Swal.fire("Ops...", "Erro ao autenticar o usuário", "error");
@@ -60,7 +60,7 @@ const Cadastro = () => {
         <input
           type="text"
           value={nome}
-          onChange={(evento) => setNome(evento.target.value)}
+          onChange={(evento: { target: { value: any; }; }) => setNome(evento.target.value)}
         />
       </label>
       <label>
@@ -68,7 +68,7 @@ const Cadastro = () => {
         <input
           type="email"
           value={email}
-          onChange={(evento) => setEmail(evento.target.value)}
+          onChange={(evento: { target: { value: any; }; }) => setEmail(evento.target.value)}
         />
       </label>
       <label>
@@ -76,7 +76,7 @@ const Cadastro = () => {
         <input
           type="text"
           value={nick}
-          onChange={(evento) => setNick(evento.target.value)}
+          onChange={(evento: { target: { value: any; }; }) => setNick(evento.target.value)}
         />
       </label>
       <label>
@@ -84,7 +84,7 @@ const Cadastro = () => {
         <input
           type="password"
           value={senha}
-          onChange={(evento) => setSenha(evento.target.value)}
+          onChange={(evento: { target: { value: any; }; }) => setSenha(evento.target.value)}
         />
       </label>
       <label>
@@ -92,7 +92,7 @@ const Cadastro = () => {
         <input
           type="password"
           value={confimarSenha}
-          onChange={(evento) => setConfimarSenha(evento.target.value)}
+          onChange={(evento: { target: { value: any; }; }) => setConfimarSenha(evento.target.value)}
         />
       </label>
       <button type="submit">Cadastrar</button>

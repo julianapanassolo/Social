@@ -1,8 +1,15 @@
 {
+  "license": "MIT",
   "dependencies": {
-    "react": "^19.0.0"
+    "react": "^19.0.0",
+    "sweetalert2": "^11.21.2"
   },
   "devDependencies": {
-    "@types/jquery": "^3.5.32"
+    "@types/jest": "^29.5.14",
+    "@types/jquery": "^3.5.32",
+    "@types/mocha": "^10.0.10",
+    "@types/react": "^19.1.5",
+    "@types/testing-library__react": "^10.2.0",
+    "typescript": "^5.8.3"
   }
 }

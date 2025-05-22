@@ -1,6 +1,8 @@
+import Swal from "sweetalert2";
+
 $('#login').on('submit', fazerLogin);
 
-function fazerLogin(evento) {
+function fazerLogin(evento: { preventDefault: () => void; }) {
     evento.preventDefault();
 
     $.ajax({
@@ -10,9 +12,9 @@ function fazerLogin(evento) {
             email: $('#email').val(),
             senha: $('#senha').val(),
         }
-    }).done(function() {
-        window.location = "/home";
-    }).fail(function() {
+    }).done(function () {
+        window.location.replace("/home");
+    }).fail(function () {
         Swal.fire("Ops...", "Usuário ou senha incorretos!", "error");
     });
 }
